@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+.task-text {
+  width: 400px;
+}
