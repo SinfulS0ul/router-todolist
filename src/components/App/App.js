@@ -84,7 +84,7 @@ class App extends Component {
               )}
             />
           </Switch>
-          <ul className="router">
+          <ul className="d-flex">
             <li>
               <NavLink to="/" exact>
                 All Tasks

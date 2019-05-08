@@ -8,8 +8,5 @@ button {
 
 li {
   list-style-type: none;
-}
-
-.task-text {
-  width: 400px;
+  margin: auto;
 }

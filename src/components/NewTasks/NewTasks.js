@@ -1,22 +1,17 @@
 import React, { Component } from "react";
+import { Task } from "../Task/Task";
 
 class NewTasks extends Component {
-  confirmTasks = task => {
-    return (
-      <li key={task.key}>
-        <span onClick={e => this.props.checkLikeDone(task.key)}>
-          <button className="task-text">
-            <span>{task.text}</span>
-          </button>
-        </span>
-        <button onClick={e => this.props.deleteTask(task.key)}>x</button>
-      </li>
-    );
-  };
-
   render() {
     let taskList = this.props.tasks.filter(task => !task.done);
-    taskList = taskList.map(this.confirmTasks);
+    taskList = taskList.map(task => (
+      <Task
+        key={task.key}
+        task={task}
+        checkLikeDone={this.props.checkLikeDone}
+        deleteTask={this.props.deleteTask}
+      />
+    ));
     return <ul>{taskList}</ul>;
   }
 }
